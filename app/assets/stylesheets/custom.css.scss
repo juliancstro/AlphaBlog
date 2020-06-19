@@ -1,0 +1,48 @@
+// adds custom styling, imports bootstrap library
+
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+    background-color: #ff6600 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    float: left;
+    font-size: 1.7em;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #ff6600 !important;
+}
+
+.body-lead {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.body-head {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.links {
+    color: #ff6600
+}
+
+.article_lead {
+    color: #ff6600
+}
+
+.link_view {
+    color: #ff6600
+}

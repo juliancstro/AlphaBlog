@@ -1,0 +1,45 @@
+<div class="article_lead mt-4 text-center font-weight-bold">
+    <p><strong><h4>Listing Articles</h4></strong></p>
+</div>
+
+
+<% @articles.each do |article| %>
+    <div class="container mt-4">
+        <div class="card text-center">
+            <div class="card-header font-italic">
+                by Julian Castro
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><%= article.title %></h5>
+                <p class="card-text overflow-hidden"><%= article.description %></p>
+                <div class="container">
+                    <button type="button" class="btn btn-dark"><%= link_to 'Show', article_path(article), class: "link_view"%></button>
+                    <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_article_path(article), class: "link_view" %></button>
+                    <button type="button" class="btn btn-dark"><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: "link_view"  %></button>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                Created: <%= time_ago_in_words(article.created_at) %> ago | Updated:
+                <%= time_ago_in_words(article.updated_at) %> ago
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
+
+
+<br>
+<div class="container text-center mt-4 mb-4">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"><%= link_to 'Home', root_path, class: "link_view" %>
+    </label>
+    <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked><%= link_to 'New Article', new_article_path, class: "link_view" %>
+    </label>
+    <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"><%= link_to 'About', about_path, class: "link_view" %>
+    </label>
+    </div>
+</div>
